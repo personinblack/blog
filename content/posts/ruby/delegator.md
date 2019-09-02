@@ -6,6 +6,11 @@ cover = "markus-spiske-xwvVT1XN2HE-unsplash.jpg"
 tags = ["ruby"]
 keywords = ["ruby", "delegator", "simpledelegator", "decorator", "pattern", "oop", "object", "oriented"]
 showFullContent = false
+description = """
+Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm
+metotların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
+belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
+"""
 +++
 
     Fotoğraf Markus Spiske

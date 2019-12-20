@@ -8,7 +8,7 @@ keywords = ["ruby", "delegator", "simpledelegator", "decorator", "pattern", "oop
 showFullContent = false
 description = """
 Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm
-metotların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
+metodların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
 belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
 """
 +++
@@ -18,7 +18,7 @@ belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
 # Ruby'de Delegatorlar
 
 Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm
-metotların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
+metodların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
 belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
 
 Öncelikle klasik bir örnekle başlayalım:
@@ -99,11 +99,11 @@ Yukarıdaki örnek çok daha iyi öyle değil mi? Malzemeleri istediğimiz gibi 
 çıkartabiliyoruz mesela. Yeni bir malzeme üretmek için ise tek yapmamız gereken yeni bir
 class oluşturmak. Böylelikle elimizde sadece `malzeme sayısı + 1` adet class oluyor.
 
-Fakat bu örnekte de bir sıkıntı var. `slice` metotu sadece `Pizza` sınıfına ait. Yani
+Fakat bu örnekte de bir sıkıntı var. `slice` metodu sadece `Pizza` sınıfına ait. Yani
 `Pepperoni.new(Pizza.new).slice` dediğimizde `undefined method 'slice'` hatasını
-alıyoruz. Çünkü Pepperoni'de bu metotun bir karşılığı yok.
+alıyoruz. Çünkü Pepperoni'de bu metodun bir karşılığı yok.
 
-Peki bunu nasıl çözeriz? Malzemelerde `slice` metotunu tanımlayabiliriz; fakat slice gibi
+Peki bunu nasıl çözeriz? Malzemelerde `slice` metodunu tanımlayabiliriz; fakat slice gibi
 başka metotlar da olabileceği için bu oldukça zahmetli olur ve normalde çok basit olması
 gereken malzeme classlarını karmaşıklaştırabilir. Delegatorlar? Evet Delegatorlar.
 
@@ -121,7 +121,7 @@ puts pizza.to_s #=> "Ben bir pepperonili pizzayım!"
 puts pizza.slice #=> "Dilimlendim!"
 ```
 
-SimpleDelegator, Pepperoni objesi üzerinde kullanılan `slice` metotunu, otomatik olarak
-constructorda tanımlanan Pizza objesine yönlendirerek, metotun çalışmasını sağladı.
-Üstelik daha önce elle tanımlamak zorunda kaldığımız constructor metotunu da kendisi
+SimpleDelegator, Pepperoni objesi üzerinde kullanılan `slice` metodunu, otomatik olarak
+constructorda tanımlanan Pizza objesine yönlendirerek, metodun çalışmasını sağladı.
+Üstelik daha önce elle tanımlamak zorunda kaldığımız constructor metodunu da kendisi
 tanımladığından, classımızı daha minimal bir hale getirebildik.

@@ -26,7 +26,7 @@ efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.
 
 Şöyle ki bu sistem;
 
-- size Spotify'ın aksine, her yerde kullanabileceğiniz, istediğiniz uzantıda ses
+- size Spotify'ın aksine; her yerde kullanabileceğiniz, istediğiniz uzantıda ses
 dosyaları verir.
 - YouTube üzerinde dinlemekte olduğunuz herhangi bir parçayı iki tık ile indirebilmenizi
 sağlar.

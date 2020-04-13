@@ -5,7 +5,6 @@ author = "personinblack <berkay@tuta.io>"
 #cover = ""
 #tags = [""]
 #keywords = [""]
-#description = ""
-showFullContent = false
-draft = true
+#description = """
+#"""
 +++

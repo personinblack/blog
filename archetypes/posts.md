@@ -1,7 +1,7 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
-author = "personinblack"
+author = "personinblack <berkay@tuta.io>"
 #cover = ""
 #tags = [""]
 #keywords = [""]

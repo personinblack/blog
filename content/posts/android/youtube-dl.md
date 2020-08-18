@@ -12,10 +12,6 @@ kal, mevzu oldukça basit.
 """
 +++
 
-<sub><sub><sub>Fotoğraf Cedric Letsch
-
-# Android ve youtube-dl
-
 [youtube-dl](https://youtube-dl.org/), YouTube ve benzeri bir çok siteden video
 indirebilen bir cli uygulamasıdır. Peki bu uygulamayı Android cihazlarımızda nasıl
 efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.

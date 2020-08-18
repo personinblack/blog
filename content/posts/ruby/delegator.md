@@ -13,10 +13,6 @@ belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
 """
 +++
 
-<sub><sub><sub>Fotoğraf Markus Spiske
-
-# Ruby'de Delegatorlar
-
 Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm
 metodların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
 belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.

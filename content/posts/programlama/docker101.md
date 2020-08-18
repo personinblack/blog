@@ -12,10 +12,6 @@ cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit
 """
 +++
 
-<sub><sub><sub>Fotoğraf Patrick Schneider
-
-# Docker101
-
 Docker, uygulamalarınızı konteynırlar içerisine alarak, her koşulda istenildiği gibi
 çalışmalarını sağlayan bir araçtır. Peki Docker bunu nasıl sağlar? Docker ile nasıl
 cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit.

@@ -1,33 +1,32 @@
 baseURL = "https://blackness.me/"
 languageCode = "tr-tr"
-theme = "terminal"
+theme = "hello-friend"
 paginate = 5
 
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "blue"
+  # "light" or "dark"
+  defaultTheme = "dark"
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
-  # show selector to switch language
-  showLanguageSelector = false
-  # set theme to full screen width
-  fullWidthTheme = false
-  # center theme with default width
-  centerTheme = false
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+  # Show reading time in minutes for posts
+  showReadingTime = true
 
 [languages]
   [languages.en]
-    languageName = "Türkçe"
     title = "Blog."
     keywords = ""
     copyright = ""
-    menuMore = "Daha"
-    readMore = "Daha"
+    menuMore = "Dahası"
+    readMore = "Dahası"
     readOtherPosts = "Başka"
+    writtenBy = ""
+    newerPosts = "Yenisi"
+    olderPosts = "Eskisi"
+    minuteReadingTime = "dakikada okursun"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
       logoText = "blackness"

@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><head><title>Android ve youtube-dl :: Blog.</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Fotoğraf Cedric Letsch  Android ve youtube-dl youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır. Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.
+Giriş Şimdi siz soracaksınız: Ben neden Spotify kullanmak varken bununla uğraşayım ki?.
+Şöyle ki bu sistem;
+ size Spotify&amp;rsquo;ın aksine; her yerde kullanabileceğiniz, istediğiniz uzantıda ses dosyaları verir. YouTube üzerinde dinlemekte olduğunuz herhangi bir parçayı iki tık ile indirebilmenizi sağlar."><meta name=keywords content="android,youtube,youtube-dl,last.fm,müzik,video,playlist,indir"><meta name=robots content="noodp"><link rel=canonical href=https://blackness.me/posts/android/youtube-dl/><link rel=stylesheet href=https://blackness.me/css/style.min.css><link rel=stylesheet href=https://blackness.me/style.css><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://blackness.me/img/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://blackness.me/img/favicon.png><meta name=twitter:card content="summary"><meta name=twitter:title content="Android ve youtube-dl"><meta name=twitter:description content="youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır.
+Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle
+kal, mevzu oldukça basit."><meta property="og:title" content="Android ve youtube-dl"><meta property="og:description" content="youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır.
+Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle
+kal, mevzu oldukça basit."><meta property="og:type" content="article"><meta property="og:url" content="https://blackness.me/posts/android/youtube-dl/"><meta property="article:published_time" content="2019-12-20T19:20:07+03:00"><meta property="article:modified_time" content="2019-12-20T19:20:07+03:00"><meta property="og:site_name" content="Blog."></head><body class=dark-theme><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>blackness</span>
+<span class=logo__cursor></span></a><span class=header__right><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h1 class=post-title><a href=https://blackness.me/posts/android/youtube-dl/>Android ve youtube-dl</a></h1><div class=post-meta><span class=post-date>2019-12-20</span>
+<span class=post-author>—  personinblack &lt;berkay@tuta.io></span>
+<span class=post-read-time>— 3 dakikada okursun</span></div><span class=post-tags>#<a href=https://blackness.me/tags/android/>android</a>&nbsp;</span><figure class=post-cover><img src=https://blackness.me/android.youtube-dl.jpeg alt="Android ve youtube-dl"></figure><div class=post-content><pre><code>Fotoğraf Cedric Letsch
+</code></pre><h1 id=android-ve-youtube-dl>Android ve youtube-dl</h1><p><a href=https://youtube-dl.org/>youtube-dl</a>, YouTube ve benzeri bir çok siteden video
+indirebilen bir cli uygulamasıdır. Peki bu uygulamayı Android cihazlarımızda nasıl
+efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.</p><h4 id=giriş>Giriş</h4><p>Şimdi siz soracaksınız: <code>Ben neden Spotify kullanmak varken bununla uğraşayım ki?</code>.</p><p>Şöyle ki bu sistem;</p><ul><li>size Spotify&rsquo;ın aksine; her yerde kullanabileceğiniz, istediğiniz uzantıda ses
+dosyaları verir.</li><li>YouTube üzerinde dinlemekte olduğunuz herhangi bir parçayı iki tık ile indirebilmenizi
+sağlar.</li><li>Spotify&rsquo;dan daha geniş bir arşive sahiptir. YouTube, Vimeo, [vb. platformlarda]
+(<a href=https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md>https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md</a>) bulunan tüm
+parçaları önünüze serer.</li><li><strong>last.fm</strong> ile birleştirilerek Spotify&rsquo;dan daha güçlü bir parça öneri mekanizması elde
+edilebilir. (Aynı zamanda dinleme alışkanlıklarınızı takip etmenize de olanak sağlar)</li><li>ebediyen ücretsizdir.</li></ul><p>İkna olduysanız, siz Spotify üyeliğinizi iptal ettikten sonra kuruluma başlayabiliriz.</p><h4 id=kurulum>Kurulum</h4><p>Öncelikle <strong>Termux</strong> isimli terminal emülatörünü yüklemeliyiz. Kendisi [F-Droid]
+(<a href=https://f-droid.org/en/packages/com.termux/>https://f-droid.org/en/packages/com.termux/</a>) ve [Play Store]
+(<a href="https://play.google.com/store/apps/details?id=com.termux)'da">https://play.google.com/store/apps/details?id=com.termux)'da</a> mevcut; oralardan
+edinebilirsiniz.</p><p>Termux sizden istemez ama sizin kendisine <em>depolama yetkisi</em> vermeniz gerek. Aksi
+durumda, youtube-dl ile indirdiklerinizi sizin rahatlıkla erişebileceğiniz <em>storage</em>
+ortamına kaydetmesi mümkün olmayacaktır. Ardından Termux&rsquo;ı başlatıp <code>$ apt update</code> ile
+paket veritabanımızı güncelleyebiliriz.</p><p>youtube-dl&rsquo;in iki adet gereksinimi mevcut: <strong>Python</strong> ve <strong>ffmpeg</strong>. Bunları
+<code>$ apt install python ffmpeg</code> ile yükleyelim. Python&rsquo;ın paket yöneticisi
+<strong>pip</strong> ile de <code>$ pip install youtube-dl</code> diyerek youtube-dl&rsquo;i kurduktan sonra
+konfigürasyon&rsquo;a hazırız.</p><h4 id=konfigürasyon>Konfigürasyon</h4><p>Termux&rsquo;ın home klasöründe youtube-dl&rsquo;in istediği konfigürasyon klasörünü oluşturalım:
+<code>$ mkdir -p ~/.config/youtube-dl/</code>. Devamında config dosyasını oluşturup düzenlemeliyiz:
+<code>$ vi ~/.config/youtube-dl/config</code> (Burada ben Termux ile beraber geldiği için <strong>vi</strong>
+editörünü kullanıyorum).</p><p><em>~/.config/youtube-dl/config</em>:</p><pre><code># İndirilenlerin kaydedileceği yer ve dosya isimlerinin belirlenmesi
+-o /storage/emulated/0/music/%(title)s.%(ext)s
+
+# Video içerisindeki sesin maksimum kalitede ve mp3 formatında çıkartılması
+--extract-audio --audio-quality 0 --audio-format mp3
+</code></pre><blockquote><p><em>Not: Yukarıdaki örneği kendi kafanıza göre düzenlemek isterseniz <code>$ man youtube-dl</code>
+içerisinde bulunan &lsquo;OUTPUT TEMPLATE&rsquo; ve &lsquo;OPTIONS&rsquo; bölümlerine göz atmayı unutmayın.</em></p></blockquote><p>Pekala, youtube-dl konfigürasyonumuz hazır. Fakat her video indirmek istediğimizde Termux&rsquo;ı
+başlatıp <code>youtube-dl https://youtube.com/video</code> demek olmaz; bunu otomatikleştirmemiz
+gerek. İşte burada <em>termux-url-opener</em> devreye giriyor:</p><p><code>$ mkdir -p ~/bin/ && vi ~/bin/termux-url-opener</code></p><p><em>~/bin/termux-url-opener</em>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
+</span><span style=color:#75715e></span>youtube-dl $1
+</code></pre></div><p>Scripti çalıştırılabilir hale getirmeyi de unutmayalım tabi:
+<code>$ chmod +x ~/bin/termux-url-opener</code>.</p><p>Artık YouTube&rsquo;a girip herhangi bir videonun (veya public playlistin) paylaşma butonuna
+bastıktan sonra Termux&rsquo;ı seçerseniz; videonun adresi yukarıdaki scripte yönlendirilecek
+ve scriptimiz de kendisine yöneltilen bu adresi youtube-dl&rsquo;e vererek videoyu mp3
+formatında indirmemizi sağlayacak.</p><blockquote><p><em>Not: youtube-dl bir süre kullanımdan sonra hata vermeye başlayabilir. Bu genellikle
+YouTube&rsquo;un API&rsquo;ının güncellenmesinden kaynaklanır. Böyle durumlarda youtube-dl&rsquo;i
+<code>pip install --upgrade youtube-dl</code> komutuyla güncellemeyi deneyebilirsiniz. Eğer
+youtube-dl, YouTube&rsquo;un API değişikliklerine uygun olarak güncellenmişse sorun ortadan
+kalkacaktır. Aksi durumda güncellemeleri takip etmelisiniz. Zaten güncellenmesi çok da
+uzun sürmez.</em></p></blockquote><p>Muhteşem! Artık YouTube&rsquo;dan iki tık ile müzik indirebiliyoruz. Ancak bir eksiğimiz var&mldr;
+İndirdiğimiz müziklerin tagleri düzgün değil ve kapak fotoğrafları yok. Bu sebeple
+müzik çalar uygulamamızda müziklerimizi yönetmemiz ve arama yapmamız hiç de kolay değil.</p><h4 id=tag-otomasyonu>Tag Otomasyonu</h4><p>Bir kaç ay öncesinde bu işi çok iyi yapan bir uygulama keşfettim; ismi <strong>AutomaTag</strong>.
+Kendisi [Play Store]
+(<a href="https://play.google.com/store/apps/details?id=com.fillobotto.mp3tagger)'da">https://play.google.com/store/apps/details?id=com.fillobotto.mp3tagger)'da</a>
+barınıyor.</p><p>Bu uygulama cihazınızın medya veritabanını tarayıp, bulduğu parçaları size listeliyor.
+Siz de ardından bu parçaları seçip tagleyebiliyorsunuz. Fakat bu işin güzel yanı;
+uygulamanın, dosya ismine bakarak size tag önerisinde bulunabiliyor olması. Eğer öneri
+doğru değilse veya uygulama herhangi bir tahminde bulunamadıysa; elle bir iki bilgi
+(sanatçı ve parça adı gibi) girdikten sonra tekrardan arama yapabilirsiniz. Ayrıca
+parça listesindeyken filtre bölümüne girip <em>Exclude songs with tag</em> seçeneğini aktif
+ederseniz zaten tagli olan parçalar gizlenir.</p><h4 id=kapanış>Kapanış</h4><p>youtube-dl, kolay yoldan müzik elde edebilmenin en iyi yollarından biri. Bu yazımda
+youtube-dl&rsquo;i Android cihazlarınızda nasıl daha etkili kullanabileceğinizi anlatmaya
+çalıştım. Seneye (aklıma ne zaman yeni bir konu gelirse o zaman) bir başka yazıda
+görüşmek üzere. Kendinize iyi bakın.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Başka</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://blackness.me/posts/programlama/docker101/><span class=button__icon>←</span>
+<span class=button__text>Docker101</span></a></span>
+<span class="button next"><a href=https://blackness.me/posts/ruby/delegator/><span class=button__text>Ruby'de Delegatorlar</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>blackness</span>
+<span class=logo__cursor></span></a><div class=copyright><span>© 2020 Powered by <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a></span>
+<span>Theme created by <a href=https://twitter.com/panr target=_blank rel=noopener>panr</a></span></div></div></footer><script src=https://blackness.me/js/menu.js></script><script src=https://blackness.me/js/theme.js></script><script src=https://blackness.me/js/prism.js></script></div></body></html>

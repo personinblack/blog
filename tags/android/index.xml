@@ -1,27 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>android on Blog.</title>
-    <link>https://blackness.me/tags/android/</link>
-    <description>Recent content in android on Blog.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>tr-tr</language>
-    <lastBuildDate>Fri, 20 Dec 2019 19:20:07 +0300</lastBuildDate>
-    
-	<atom:link href="https://blackness.me/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android ve youtube-dl</title>
-      <link>https://blackness.me/posts/android/youtube-dl/</link>
-      <pubDate>Fri, 20 Dec 2019 19:20:07 +0300</pubDate>
-      
-      <guid>https://blackness.me/posts/android/youtube-dl/</guid>
-      <description>Fotoğraf Cedric Letsch  Android ve youtube-dl youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır. Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.
-Giriş Şimdi siz soracaksınız: Ben neden Spotify kullanmak varken bununla uğraşayım ki?.
-Şöyle ki bu sistem;
- size Spotify&amp;rsquo;ın aksine; her yerde kullanabileceğiniz, istediğiniz uzantıda ses dosyaları verir. YouTube üzerinde dinlemekte olduğunuz herhangi bir parçayı iki tık ile indirebilmenizi sağlar.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>android on Blog.</title><link>https://blackness.me/tags/android/</link><description>Recent content in android on Blog.</description><generator>Hugo -- gohugo.io</generator><language>tr-tr</language><lastBuildDate>Fri, 20 Dec 2019 19:20:07 +0300</lastBuildDate><atom:link href="https://blackness.me/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Android ve youtube-dl</title><link>https://blackness.me/posts/android/youtube-dl/</link><pubDate>Fri, 20 Dec 2019 19:20:07 +0300</pubDate><guid>https://blackness.me/posts/android/youtube-dl/</guid><description>
+&lt;img src="https://blackness.me/android.youtube-dl.jpeg"/>
+youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır.
+Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle
+kal, mevzu oldukça basit.</description></item></channel></rss>

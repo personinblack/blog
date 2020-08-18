@@ -1,48 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Blog.</title>
-    <link>https://blackness.me/posts/</link>
-    <description>Recent content in Posts on Blog.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>tr-tr</language>
-    <lastBuildDate>Wed, 08 Apr 2020 17:08:07 +0300</lastBuildDate>
-    
-	<atom:link href="https://blackness.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Docker101</title>
-      <link>https://blackness.me/posts/programlama/docker101/</link>
-      <pubDate>Wed, 08 Apr 2020 17:08:07 +0300</pubDate>
-      
-      <guid>https://blackness.me/posts/programlama/docker101/</guid>
-      <description>Fotoğraf Patrick Schneider  Docker101 Docker, uygulamalarınızı konteynırlar içerisine alarak, her koşulda istenildiği gibi çalışmalarını sağlayan bir araçtır. Peki Docker bunu nasıl sağlar? Docker ile nasıl cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit.
-Giriş Öncelikle https://docs.docker.com/get-docker/ sayfası üzerinden Docker&amp;rsquo;ı edinmemiz gerek. Bu işlem tüm işletim sistemlerinde farklı olduğu için burada değinemiyorum fakat bize Docker Engine veya Docker Desktop gerekli (bu yazıda Docker Compose&amp;rsquo;dan bahsetmeyeceğim, bu yüzden kendisine ihtiyacımız yok).</description>
-    </item>
-    
-    <item>
-      <title>Android ve youtube-dl</title>
-      <link>https://blackness.me/posts/android/youtube-dl/</link>
-      <pubDate>Fri, 20 Dec 2019 19:20:07 +0300</pubDate>
-      
-      <guid>https://blackness.me/posts/android/youtube-dl/</guid>
-      <description>Fotoğraf Cedric Letsch  Android ve youtube-dl youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır. Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle kal, mevzu oldukça basit.
-Giriş Şimdi siz soracaksınız: Ben neden Spotify kullanmak varken bununla uğraşayım ki?.
-Şöyle ki bu sistem;
- size Spotify&amp;rsquo;ın aksine; her yerde kullanabileceğiniz, istediğiniz uzantıda ses dosyaları verir. YouTube üzerinde dinlemekte olduğunuz herhangi bir parçayı iki tık ile indirebilmenizi sağlar.</description>
-    </item>
-    
-    <item>
-      <title>Ruby&#39;de Delegatorlar</title>
-      <link>https://blackness.me/posts/ruby/delegator/</link>
-      <pubDate>Mon, 02 Sep 2019 10:56:08 +0300</pubDate>
-      
-      <guid>https://blackness.me/posts/ruby/delegator/</guid>
-      <description>Fotoğraf Markus Spiske  Ruby&amp;rsquo;de Delegatorlar Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm metodların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
-Öncelikle klasik bir örnekle başlayalım:
-class Pizza def slice &amp;#39;Dilimlendim!&amp;#39; end def to_s &amp;#39;Ben bir pizzayım!&amp;#39; end end class PizzaWithPepperoni &amp;lt; Pizza def to_s super.sub(/((?!\s).)+\!/, &amp;#39;pepperonili pizzayım!&amp;#39;) end end class PizzaWithMushroom &amp;lt; Pizza def to_s super.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Blog.</title><link>https://blackness.me/posts/</link><description>Recent content in Posts on Blog.</description><generator>Hugo -- gohugo.io</generator><language>tr-tr</language><lastBuildDate>Wed, 08 Apr 2020 17:08:07 +0300</lastBuildDate><atom:link href="https://blackness.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker101</title><link>https://blackness.me/posts/programlama/docker101/</link><pubDate>Wed, 08 Apr 2020 17:08:07 +0300</pubDate><guid>https://blackness.me/posts/programlama/docker101/</guid><description>
+&lt;img src="https://blackness.me/programlama.docker101.jpeg"/>
+Docker, uygulamalarınızı konteynırlar içerisine alarak, her koşulda istenildiği gibi
+çalışmalarını sağlayan bir araçtır. Peki Docker bunu nasıl sağlar? Docker ile nasıl
+cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit.</description></item><item><title>Android ve youtube-dl</title><link>https://blackness.me/posts/android/youtube-dl/</link><pubDate>Fri, 20 Dec 2019 19:20:07 +0300</pubDate><guid>https://blackness.me/posts/android/youtube-dl/</guid><description>
+&lt;img src="https://blackness.me/android.youtube-dl.jpeg"/>
+youtube-dl, YouTube ve benzeri bir çok siteden video indirebilen bir cli uygulamasıdır.
+Peki bu uygulamayı Android cihazlarımızda nasıl efektif olarak kullanabiliriz? Benimle
+kal, mevzu oldukça basit.</description></item><item><title>Ruby'de Delegatorlar</title><link>https://blackness.me/posts/ruby/delegator/</link><pubDate>Mon, 02 Sep 2019 10:56:08 +0300</pubDate><guid>https://blackness.me/posts/ruby/delegator/</guid><description>
+&lt;img src="https://blackness.me/markus-spiske-xwvVT1XN2HE-unsplash.jpg"/>
+Delegatorlar bir obje üzerinde kullanılan ve obje tarafında bir karşılığı bulunmayan tüm
+metodların constructorda tanımlanmış bir başka objeye yönlendirilmesini sağlar. Bu tanım
+belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.</description></item></channel></rss>

@@ -12,7 +12,7 @@ kal, mevzu oldukça basit.
 """
 +++
 
-    Fotoğraf Cedric Letsch
+<sub><sub><sub>Fotoğraf Cedric Letsch
 
 # Android ve youtube-dl
 

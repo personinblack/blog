@@ -13,7 +13,7 @@ belki biraz karmaşık gelmiş olabilir fakat benimle kal, mevzu oldukça basit.
 """
 +++
 
-    Fotoğraf Markus Spiske
+<sub><sub><sub>Fotoğraf Markus Spiske
 
 # Ruby'de Delegatorlar
 

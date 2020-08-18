@@ -12,7 +12,7 @@ cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit
 """
 +++
 
-    Fotoğraf Patrick Schneider
+<sub><sub><sub>Fotoğraf Patrick Schneider
 
 # Docker101
 

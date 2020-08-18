@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programlama on Blog.</title>
+    <link>https://blackness.me/tags/programlama/</link>
+    <description>Recent content in programlama on Blog.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Wed, 08 Apr 2020 17:08:07 +0300</lastBuildDate>
+    
+	<atom:link href="https://blackness.me/tags/programlama/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker101</title>
+      <link>https://blackness.me/posts/programlama/docker101/</link>
+      <pubDate>Wed, 08 Apr 2020 17:08:07 +0300</pubDate>
+      
+      <guid>https://blackness.me/posts/programlama/docker101/</guid>
+      <description>Fotoğraf Patrick Schneider  Docker101 Docker, uygulamalarınızı konteynırlar içerisine alarak, her koşulda istenildiği gibi çalışmalarını sağlayan bir araçtır. Peki Docker bunu nasıl sağlar? Docker ile nasıl cross-platform bir uygulama geliştirebiliriz? Benimle kal, mevzu oldukça basit.
+Giriş Öncelikle https://docs.docker.com/get-docker/ sayfası üzerinden Docker&amp;rsquo;ı edinmemiz gerek. Bu işlem tüm işletim sistemlerinde farklı olduğu için burada değinemiyorum fakat bize Docker Engine veya Docker Desktop gerekli (bu yazıda Docker Compose&amp;rsquo;dan bahsetmeyeceğim, bu yüzden kendisine ihtiyacımız yok).</description>
+    </item>
+    
+  </channel>
+</rss>

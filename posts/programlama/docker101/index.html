@@ -49,33 +49,34 @@ kurulumu ve beraberinde gelen Node.js paketi kullanımımıza hazır olacak.</p>
 oluşturulurlar. <code>touch Dockerfile</code> diyerek bir tane oluşturduktan sonra, kendisini metin
 editörümüz ile düzenlemeye başlayalım.</p><p>Bizim imajımız başka bir imajın bir nevi uzantısı olacak. Dockerfile&rsquo;ımızın ilk
 satırında bu imajı belirtmemiz gerekiyor ki, sonraki adımlara geçtiğimizde elimizde
-üzerinde çalışabileceğimiz bir sistem olsun. Bunun için de [FROM]
-(<a href=https://docs.docker.com/engine/reference/builder#from>https://docs.docker.com/engine/reference/builder#from</a>) direktifini kullanıyoruz:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
+üzerinde çalışabileceğimiz bir sistem olsun. Bunun için de
+<a href=https://docs.docker.com/engine/reference/builder#from>FROM</a> direktifini kullanıyoruz:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
 </span></code></pre></div><p>Sırada uygulamamızı konteynırın içerisine taşımak var. Kendisinin ebediyen barınacağı
 dizine gittikten sonra, <em>app.js</em> dosyasını yerel makineden konteynıra aktaralım:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /appdir</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> app.js ./<span style=color:#960050;background-color:#1e0010>
 </span></code></pre></div><p><a href=https://docs.docker.com/engine/reference/builder#workdir>WORKDIR</a> direktifi ile
 mevcut çalışma dizinimizi değiştiriyoruz. <em>/appdir</em> adında bir klasör var olmasa dahi
-<em>WORKDIR</em> bizim için bu klasörü oluşturacak. Devamında [COPY]
-(<a href=https://docs.docker.com/engine/reference/builder#copy>https://docs.docker.com/engine/reference/builder#copy</a>) ile dosyayı yerelden alıp
+<em>WORKDIR</em> bizim için bu klasörü oluşturacak. Devamında
+<a href=https://docs.docker.com/engine/reference/builder#copy>COPY</a> ile dosyayı yerelden alıp
 konteynırdaki çalışma dizinimize yerleştiriyoruz.</p><p>Uygulamamız <em>80</em> portu üzerinde çalışacak fakat bu port şu anda konteynırın dışından
-erişilemez durumda. Portu dışarıdan erişilebilir hale getirmek için [EXPOSE]
-(<a href=https://docs.docker.com/engine/reference/builder#expose>https://docs.docker.com/engine/reference/builder#expose</a>) direktifini ekleyelim:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
+erişilemez durumda. Portu dışarıdan erişilebilir hale getirmek için
+<a href=https://docs.docker.com/engine/reference/builder#expose>EXPOSE</a> direktifini ekleyelim:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /appdir</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> app.js ./<span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 80</span><span style=color:#960050;background-color:#1e0010>
-</span></code></pre></div><p>Son olarak uygulamamızın konteynır içerisinde hangi komut ile çalışacağını [ENTRYPOINT]
-(<a href=https://docs.docker.com/engine/reference/builder#entrypoint>https://docs.docker.com/engine/reference/builder#entrypoint</a>) direktifi ile tanımlayalım:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
+</span></code></pre></div><p>Son olarak uygulamamızın konteynır içerisinde hangi komut ile çalışacağını
+<a href=https://docs.docker.com/engine/reference/builder#entrypoint>ENTRYPOINT</a> direktifi ile
+tanımlayalım:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:13-alpine</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /appdir</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> app.js ./<span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 80</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENTRYPOINT</span> [ <span style=color:#e6db74>&#34;node&#34;</span>, <span style=color:#e6db74>&#34;app.js&#34;</span> ]<span style=color:#960050;background-color:#1e0010>
 </span></code></pre></div><blockquote><p><em>ENTRYPOINT</em> direktifi, imajımız <em>çalıştırıldığında</em> hangi komutun gerçekleştirileceğini
 belirtmemizi sağlar ve genellikle Dockerfile&rsquo;ın sonunda bulunur. Eğer ki imajın
-<em>hazırlığı</em> sırasında komut girmek istersek [RUN]
-(<a href=https://docs.docker.com/engine/reference/builder#run>https://docs.docker.com/engine/reference/builder#run</a>) direktifini kullanabiliriz.</p><p><em>Not: Aynı zamanda ENTRYPOINT direktifinin bir alternatifi de olan [CMD]
-(<a href=https://docs.docker.com/engine/reference/builder#cmd>https://docs.docker.com/engine/reference/builder#cmd</a>) direktifi, ENTRYPOINT
+<em>hazırlığı</em> sırasında komut girmek istersek
+<a href=https://docs.docker.com/engine/reference/builder#run>RUN</a> direktifini kullanabiliriz.</p><p><em>Not: Aynı zamanda ENTRYPOINT direktifinin bir alternatifi de olan
+<a href=https://docs.docker.com/engine/reference/builder#cmd>CMD</a> direktifi, ENTRYPOINT
 direktifine argümanlar belirtmek için kullanılabilir. Örneğin uygulamamız opsiyonlar
 kabul ediyor olsaydı şunu yapabilirdik:</em></p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>ENTRYPOINT</span> [ <span style=color:#e6db74>&#34;node&#34;</span>, <span style=color:#e6db74>&#34;app.js&#34;</span> ]<span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> [ <span style=color:#e6db74>&#34;--option1=true&#34;</span>, <span style=color:#e6db74>&#34;--option2=false&#34;</span> ]<span style=color:#960050;background-color:#1e0010>
@@ -87,13 +88,13 @@ kabul ediyor olsaydı şunu yapabilirdik:</em></p></blockquote><div class=highli
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> node app.js --option1<span style=color:#f92672>=</span>true --option2<span style=color:#f92672>=</span>false<span style=color:#960050;background-color:#1e0010>
 </span></code></pre></div><h4 id=build--run>Build && Run!</h4><p>İmajımız builde hazır. <code>docker build -t blackness/docker101 .</code> komutu ile
 build edebilir (sondaki nokta Dockerfile&rsquo;ın bulunduğu dizin) ve
-<code>docker run -dp 8080:80 blackness/docker101</code> komutu ile de çalıştırabiliriz.</p><p><code>docker run</code> komutuna girdiğimiz [ <code>-d</code>]
-(<a href=https://docs.docker.com/engine/reference/run#detached--d>https://docs.docker.com/engine/reference/run#detached--d</a>) parametresi <em>detach</em> anlamına
-gelir ve konteynırı arkaplanda çalıştırmamızı sağlar. [ <code>-p yerel:konteynır</code>]
-(<a href=https://docs.docker.com/engine/reference/#expose-incoming-ports>https://docs.docker.com/engine/reference/#expose-incoming-ports</a>) parametresi ise
-konteynır ve yerel makine arasındaki 2 portu bağlamamız, konteynırın portunu expose
-etmemiz için gerekli. Tüm parametreleri görmek istersen <code>docker run --help</code> veya
-<code>man docker-run</code> komutlarından birini kullanabilirsin.</p><p>Bu aşamadan sonra tarayıcımız yardımı ile veya <code>curl</code> komutuyla &ldquo;localhost:8080&rdquo;
+<code>docker run -dp 8080:80 blackness/docker101</code> komutu ile de çalıştırabiliriz.</p><p><code>docker run</code> komutuna girdiğimiz
+<a href=https://docs.docker.com/engine/reference/run#detached--d><code>-d</code></a> parametresi <em>detach</em>
+anlamına gelir ve konteynırı arkaplanda çalıştırmamızı sağlar.
+<a href=https://docs.docker.com/engine/reference/#expose-incoming-ports><code>-p yerel:konteynır</code></a>
+parametresi ise konteynır ve yerel makine arasındaki 2 portu bağlamamız, konteynırın
+portunu expose etmemiz için gerekli. Tüm parametreleri görmek istersen <code>docker run --help</code>
+veya <code>man docker-run</code> komutlarından birini kullanabilirsin.</p><p>Bu aşamadan sonra tarayıcımız yardımı ile veya <code>curl</code> komutuyla &ldquo;localhost:8080&rdquo;
 adresine bağlı uygulamamıza erişebilmemiz gerek. Ama erişemiyoruz? Peki neden? Çünkü
 uygulamamız konteynır içerisindeki <em>127.0.0.1</em> adresini (localhost) dinliyor fakat
 bu adres konteynır dışarısına yönlendirilmiyor.</p><p>Sorunu çözmek için <em>127.0.0.1</em> değerini <em>0.0.0.0</em> ile değiştirerek Docker&rsquo;ın
@@ -117,8 +118,8 @@ indexi barındıran <em>data</em> klasörünü bir volume&rsquo;a çevirelim:</p
 </span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 80</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENTRYPOINT</span> [ <span style=color:#e6db74>&#34;node&#34;</span>, <span style=color:#e6db74>&#34;app.js&#34;</span> ]<span style=color:#960050;background-color:#1e0010>
-</span></code></pre></div><p><em>VOLUME</em> direktifimizin bir işe yaraması için volume&rsquo;u bir yere [mount]
-(<a href=https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag>https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag</a>)
+</span></code></pre></div><p><em>VOLUME</em> direktifimizin bir işe yaraması için volume&rsquo;u bir yere
+<a href=https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag>mount</a>
 etmemiz gerekiyor. Bunun için de imajımızı başlatmak için kullandığımız komutu şu şekilde
 değiştirmeliyiz:</p><p><code>docker run -dp 8080:80 -v myvol:/appdir/data blackness/docker101</code></p><p><code>-v</code> / <code>--volume</code> opsiyonu iki argümandan oluşmakta. Docker ilk argümanda belirttiğimiz
 isim ile (<em>myvol</em>) aynı isimde bir Docker volume&rsquo;u oluşturduktan sonra bu volume&rsquo;u

@@ -81,8 +81,8 @@ editörümüz ile düzenlemeye başlayalım.
 
 Bizim imajımız başka bir imajın bir nevi uzantısı olacak. Dockerfile'ımızın ilk
 satırında bu imajı belirtmemiz gerekiyor ki, sonraki adımlara geçtiğimizde elimizde
-üzerinde çalışabileceğimiz bir sistem olsun. Bunun için de [FROM]
-(https://docs.docker.com/engine/reference/builder#from) direktifini kullanıyoruz:
+üzerinde çalışabileceğimiz bir sistem olsun. Bunun için de
+[FROM](https://docs.docker.com/engine/reference/builder#from) direktifini kullanıyoruz:
 
 ```Dockerfile
 FROM node:13-alpine
@@ -99,13 +99,13 @@ COPY app.js ./
 
 [WORKDIR](https://docs.docker.com/engine/reference/builder#workdir) direktifi ile
 mevcut çalışma dizinimizi değiştiriyoruz. */appdir* adında bir klasör var olmasa dahi
-*WORKDIR* bizim için bu klasörü oluşturacak. Devamında [COPY]
-(https://docs.docker.com/engine/reference/builder#copy) ile dosyayı yerelden alıp
+*WORKDIR* bizim için bu klasörü oluşturacak. Devamında
+[COPY](https://docs.docker.com/engine/reference/builder#copy) ile dosyayı yerelden alıp
 konteynırdaki çalışma dizinimize yerleştiriyoruz.
 
 Uygulamamız *80* portu üzerinde çalışacak fakat bu port şu anda konteynırın dışından
-erişilemez durumda. Portu dışarıdan erişilebilir hale getirmek için [EXPOSE]
-(https://docs.docker.com/engine/reference/builder#expose) direktifini ekleyelim:
+erişilemez durumda. Portu dışarıdan erişilebilir hale getirmek için
+[EXPOSE](https://docs.docker.com/engine/reference/builder#expose) direktifini ekleyelim:
 
 ```Dockerfile
 FROM node:13-alpine
@@ -114,8 +114,9 @@ COPY app.js ./
 EXPOSE 80
 ```
 
-Son olarak uygulamamızın konteynır içerisinde hangi komut ile çalışacağını [ENTRYPOINT]
-(https://docs.docker.com/engine/reference/builder#entrypoint) direktifi ile tanımlayalım:
+Son olarak uygulamamızın konteynır içerisinde hangi komut ile çalışacağını
+[ENTRYPOINT](https://docs.docker.com/engine/reference/builder#entrypoint) direktifi ile
+tanımlayalım:
 
 ```Dockerfile
 FROM node:13-alpine
@@ -127,11 +128,11 @@ ENTRYPOINT [ "node", "app.js" ]
 
 > *ENTRYPOINT* direktifi, imajımız *çalıştırıldığında* hangi komutun gerçekleştirileceğini
 > belirtmemizi sağlar ve genellikle Dockerfile'ın sonunda bulunur. Eğer ki imajın
-> *hazırlığı* sırasında komut girmek istersek [RUN]
-> (https://docs.docker.com/engine/reference/builder#run) direktifini kullanabiliriz.
+> *hazırlığı* sırasında komut girmek istersek
+> [RUN](https://docs.docker.com/engine/reference/builder#run) direktifini kullanabiliriz.
 >
-> *Not: Aynı zamanda ENTRYPOINT direktifinin bir alternatifi de olan [CMD]
-> (https://docs.docker.com/engine/reference/builder#cmd) direktifi, ENTRYPOINT
+> *Not: Aynı zamanda ENTRYPOINT direktifinin bir alternatifi de olan
+> [CMD](https://docs.docker.com/engine/reference/builder#cmd) direktifi, ENTRYPOINT
 > direktifine argümanlar belirtmek için kullanılabilir. Örneğin uygulamamız opsiyonlar
 > kabul ediyor olsaydı şunu yapabilirdik:*
 ```Dockerfile
@@ -151,13 +152,13 @@ CMD node app.js --option1=true --option2=false
 build edebilir (sondaki nokta Dockerfile'ın bulunduğu dizin) ve
 `docker run -dp 8080:80 blackness/docker101` komutu ile de çalıştırabiliriz.
 
-`docker run` komutuna girdiğimiz [ `-d`]
-(https://docs.docker.com/engine/reference/run#detached--d) parametresi *detach* anlamına
-gelir ve konteynırı arkaplanda çalıştırmamızı sağlar. [ `-p yerel:konteynır`]
-(https://docs.docker.com/engine/reference/#expose-incoming-ports) parametresi ise
-konteynır ve yerel makine arasındaki 2 portu bağlamamız, konteynırın portunu expose
-etmemiz için gerekli. Tüm parametreleri görmek istersen `docker run --help` veya
-`man docker-run` komutlarından birini kullanabilirsin.
+`docker run` komutuna girdiğimiz
+[ `-d`](https://docs.docker.com/engine/reference/run#detached--d) parametresi *detach*
+anlamına gelir ve konteynırı arkaplanda çalıştırmamızı sağlar.
+[ `-p yerel:konteynır`](https://docs.docker.com/engine/reference/#expose-incoming-ports)
+parametresi ise konteynır ve yerel makine arasındaki 2 portu bağlamamız, konteynırın
+portunu expose etmemiz için gerekli. Tüm parametreleri görmek istersen `docker run --help`
+veya `man docker-run` komutlarından birini kullanabilirsin.
 
 Bu aşamadan sonra tarayıcımız yardımı ile veya `curl` komutuyla "localhost:8080"
 adresine bağlı uygulamamıza erişebilmemiz gerek. Ama erişemiyoruz? Peki neden? Çünkü
@@ -202,8 +203,8 @@ EXPOSE 80
 ENTRYPOINT [ "node", "app.js" ]
 ```
 
-*VOLUME* direktifimizin bir işe yaraması için volume'u bir yere [mount]
-(https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag)
+*VOLUME* direktifimizin bir işe yaraması için volume'u bir yere
+[mount](https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag)
 etmemiz gerekiyor. Bunun için de imajımızı başlatmak için kullandığımız komutu şu şekilde
 değiştirmeliyiz:
 

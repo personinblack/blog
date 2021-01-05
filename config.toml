@@ -1,4 +1,4 @@
-baseURL = "https://blackness.me/"
+baseURL = "https://personinblack.github.io/blog/"
 languageCode = "tr-tr"
 theme = "hello-friend"
 paginate = 5
